@@ -31,13 +31,6 @@ export async function sellYourItemAction(
   prevstate: prevStateInterface,
   formData: FormData,
 ) {
-  console.log({ prevstate });
-  console.log(formData.get("name"));
-  console.log(formData.get("description"));
-  console.log(formData.get("imageURL"));
-  console.log(formData.get("price"));
-  console.log(formData.get("contactEmail"));
-
   const schema = z.object({
     name: z.string().min(4),
     description: z.string().min(10),

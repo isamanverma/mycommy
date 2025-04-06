@@ -5,7 +5,7 @@ export default function NotFoundPage() {
   return (
     <div className="flex h-full min-h-[calc(100vh-8rem)] flex-col items-center justify-center px-6 text-center text-stone-950">
       <Image
-        src="/logo.png"
+        src="/assets/logo.png"
         alt="Logo"
         width={80}
         height={80}

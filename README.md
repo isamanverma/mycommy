@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ☺️ myCommy – Curated Living
 
-## Getting Started
+**Discover beautifully curated objects for modern living.**  
+From cozy corners to statement pieces, **myCommy** brings character and charm to every space.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ What is myCommy?
+
+**myCommy** is a lifestyle-forward platform that showcases handpicked home decor and design items tailored for modern, intentional living. We believe that your space should feel like _you_ — warm, personal, and beautifully lived in.
+
+Whether you're designing a minimalist nook or revamping an entire room, **myCommy** helps you find pieces that tell a story.
+
+---
+
+## 🚀 Features
+
+- 🖼️ **Curated Collections** – Discover objects thoughtfully selected for design, sustainability, and story.
+- 🛒 **Effortless Browsing** – A seamless, modern interface built for visual exploration.
+- 💡 **Style Inspiration** – From editorial layouts to cozy moodboards, get inspired by real-life spaces.
+- 🌐 **SEO-Optimized Sharing** – Built-in OpenGraph metadata for beautiful link previews.
+- 📱 **Mobile-First** – Responsive design that looks stunning on every screen.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Next.js 15** with App Router
+- **TypeScript** for safety and clarity
+- **Tailwind CSS** for beautiful, responsive UI
+- **Custom Metadata SEO** with Open Graph + Canonical URLs
+- **Image Optimization** via Next.js `Image` component
+
+---
+
+## 📸 Open Graph Preview
+
+myCommy uses custom Open Graph images for enhanced social sharing:
+
+```ts
+openGraph: {
+  images: [`${getCanonicalUrl()}/assets/og-image.png`],
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This ensures every link looks good on Twitter, Facebook, and beyond.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+.
+├── app/
+├── components/
+├── styles/
+├── public/assets/
+├── utils/
+└── ...
+```
 
-To learn more about Next.js, take a look at the following resources:
+- `app/`: App Router pages and layout
+- `components/`: Reusable UI components
+- `public/assets/`: Static images including OG preview
+- `utils/`: Helper functions like `getCanonicalUrl`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌿 Join the Curated Living Movement
 
-## Deploy on Vercel
+Have an eye for design or a story to tell through space?  
+We’d love to hear from you. [Start a conversation →](mailto:hello@mycommy.com)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> _“We shape our homes and then our homes shape us.”_ – Winston Churchill

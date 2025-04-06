@@ -8,7 +8,7 @@ export default function Footer({ font }: { font?: string }) {
         <span className="text-sm text-gray-300">&copy; isamanverma</span>
 
         <div className="flex items-center gap-2">
-          <Image src="/logo.png" alt="myCommy logo" width={28} height={28} />
+          <Image src="/assets/logo.png" alt="myCommy logo" width={28} height={28} />
           <span className="text-base font-semibold">myCommy</span>
         </div>
 

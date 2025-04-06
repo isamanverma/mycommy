@@ -12,7 +12,7 @@ export default function Header({ font }: { font?: string }) {
         href="/"
       >
         <Image
-          src="/logo.png"
+          src="/assets/logo.png"
           alt="Commy logo"
           width={28}
           height={28}

@@ -5,7 +5,6 @@ import { Montserrat, Roboto } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
-import { ViewTransitions } from "next-view-transitions";
 import { getCanonicalUrl } from "@/utils";
 
 const roboto = Roboto({
@@ -34,16 +33,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en" className="h-full">
-        <body className="flex min-h-screen flex-col antialiased">
-          <Header font={roboto.className} />
-          <main className={`${montserrat.className} flex-grow bg-amber-50`}>
-            {children}
-          </main>
-          <Footer font={roboto.className} />
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="en" className="h-full">
+      <body className="flex min-h-screen flex-col antialiased">
+        <Header font={roboto.className} />
+        <main className={`${montserrat.className} flex-grow bg-amber-50`}>
+          {children}
+        </main>
+        <Footer font={roboto.className} />
+      </body>
+    </html>
   );
 }

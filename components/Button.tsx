@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowLeft } from "lucide-react";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 
 interface ButtonProps {
   link: string;

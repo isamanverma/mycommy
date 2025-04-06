@@ -136,7 +136,7 @@ export default async function ProductPage({
 
             {typeof product.price === "number" && (
               <div className="text-2xl font-medium text-gray-800">
-                ${product.price.toFixed(2)}
+                ₹{product.price.toFixed(2)}
               </div>
             )}
           </div>

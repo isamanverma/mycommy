@@ -30,7 +30,12 @@ export default function UploadPage() {
 
   useEffect(() => {
     if (state && state.type === "success") {
-      router.push("/");
+      // Add a small delay before redirecting to ensure the success message is seen
+      const redirectTimer = setTimeout(() => {
+        router.push("/");
+      }, 1000);
+
+      return () => clearTimeout(redirectTimer);
     }
   }, [state, router]);
 

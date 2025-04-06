@@ -33,7 +33,7 @@ export async function sellYourItemAction(
 ): Promise<UploadFormState> {
   const schema = z.object({
     name: z.string().min(4),
-    description: z.string().min(10),
+    description: z.string().min(5),
     contactEmail: z.string().min(1).email("Not a valid email"),
     price: z.string().min(1),
     imageURL: z
@@ -117,9 +117,10 @@ export async function sellYourItemAction(
           message: "Database Error: Failed to Add Product",
         };
       }
+
       revalidatePath("/");
-      redirect("/");
       return { type: "success", message: "Product Added Successfully" };
+
     }
   } catch (error) {
     console.error("General Error:", error);

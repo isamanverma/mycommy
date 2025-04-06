@@ -15,7 +15,7 @@ const ACCEPTED_IMAGE_TYPES = [
   "image/avif",
 ];
 
-interface prevStateInterface {
+export interface UploadFormState {
   type?: "success" | "error";
   message?: string;
   errors?: {
@@ -28,9 +28,9 @@ interface prevStateInterface {
 }
 
 export async function sellYourItemAction(
-  prevstate: prevStateInterface,
+  prevstate: UploadFormState,
   formData: FormData,
-) {
+): Promise<UploadFormState> {
   const schema = z.object({
     name: z.string().min(4),
     description: z.string().min(10),
@@ -117,7 +117,8 @@ export async function sellYourItemAction(
           message: "Database Error: Failed to Add Product",
         };
       }
-
+      revalidatePath("/");
+      redirect("/");
       return { type: "success", message: "Product Added Successfully" };
     }
   } catch (error) {
@@ -127,8 +128,10 @@ export async function sellYourItemAction(
       message: "Database Error: Failed to Add Product",
     };
   }
-  if (prevstate && prevstate.type === "success") {
-    revalidatePath("/");
-    redirect("/");
-  }
+
+  return {
+    type: "error",
+    message: "An unexpected error occured",
+    errors: null,
+  };
 }

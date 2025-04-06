@@ -26,10 +26,7 @@ const initialState: UploadFormState = {
 
 export default function UploadPage() {
   const router = useRouter();
-  const [state, formAction] = useActionState<UploadFormState, FormData>(
-    sellYourItemAction as any,
-    initialState,
-  );
+  const [state, formAction] = useActionState(sellYourItemAction, initialState);
 
   useEffect(() => {
     if (state && state.type === "success") {

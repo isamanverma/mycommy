@@ -1,5 +1,65 @@
 @import "tailwindcss";
 
+@theme {
+  --color-pumpkin-orange: #ff8668;
+  --color-muted-orange: #c89b739b;
+}
+
+/* Add these new animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+@keyframes clip-path-change {
+  0% {
+    clip-path: circle(70% at 50% 50%);
+  }
+  25% {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+  50% {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  }
+  75% {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  }
+  100% {
+    clip-path: circle(70% at 50% 50%);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-dash {
+  animation: dash 15s linear infinite;
+}
+
+.clip-path-animate {
+  animation: clip-path-change 15s ease-in-out infinite;
+}
+
+.clip-spill {
+  clip-path: circle(0% at 0% 100%);
+}
+
+.group:hover .clip-spill {
+  clip-path: circle(250% at 0% 100%);
+}
+
+/* 
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +83,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */

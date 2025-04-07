@@ -5,14 +5,30 @@ export default function Footer({ font }: { font?: string }) {
   return (
     <footer className={`w-full bg-stone-900 px-8 py-6 text-white ${font}`}>
       <div className="flex flex-col items-center justify-between gap-4 sm:flex-row sm:gap-0">
-        <span className="text-sm text-gray-300">&copy; isamanverma</span>
+        <a href="https://isamanverma.vercel.app/">
+          <div className="flex gap-1 transition-transform duration-300 ease-in-out hover:scale-105 hover:rotate-1">
+            <Image
+              src={"/assets/portfolio.png"}
+              alt="Portfolio"
+              width={28}
+              height={28}
+              className="invert"
+            />
+            <span className="text-lg text-gray-300">isamanverma</span>
+          </div>
+        </a>
 
         <div className="flex items-center gap-2">
-          <Image src="/assets/logo.png" alt="myCommy logo" width={28} height={28} />
-          <span className="text-base font-semibold">myCommy</span>
+          <Image
+            src="/assets/logo.png"
+            alt="myCommy logo"
+            width={28}
+            height={28}
+          />
+          <span className="text-lg font-semibold">myCommy</span>
         </div>
 
-        <div className="flex gap-6 text-sm text-gray-300">
+        <div className="flex gap-6 text-lg text-gray-300">
           <a
             href="https://www.linkedin.com/in/aman-kumar-verma-/"
             target="_blank"
